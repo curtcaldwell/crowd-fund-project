@@ -1,0 +1,12 @@
+<h2>Projects</h2>
+
+<div class="card card-default" *ngFor="let project of projects | async">
+  <div class="card-body">
+    <h3>{{project.title}} <br>
+    by: {{project.organizer}} <br>
+    Goal: {{project.goal}} <br>
+    Finish Date: {{project.date}}
+    </h3>
+    <p>{{project.description}}</p>
+  </div>
+</div>

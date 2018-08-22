@@ -1,0 +1,20 @@
+{ "projects": [{
+    "title": "Fund James healthcare",
+    "organizer": "Epicodus Students",
+    "goal":10,
+    "date": "2018/09/22",
+    "description": "James is a poor student looking for help paying for his healthcare, he needs 10 dollars to pay for bananas and leaves."
+    }, {
+    "title": "Toys for tots",
+    "organizer": "Bill Billerson",
+    "goal":15,
+    "date": "2018/09/23",
+    "description": "Hey yall im starting a fundraiser to provide toys for all the munchkins in pioneer square."
+      }, {
+    "title": "Water for Waterloo",
+    "organizer": "Von Douche",
+    "goal":10000,
+    "date": "2018/09/25",
+    "description": "Raising money for providing more water for rich europeans."
+  }]
+}
