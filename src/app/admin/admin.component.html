@@ -1,37 +1,24 @@
+<h4>Edit Project</h4>
 
-<h3>Add New Project to be FUNded</h3>
-<div class="card card-body">
+<label>New Project Title:</label>
+<input [(ngModel)]="selectedProject.title">
+<br>
 
-  <div>
-    <label>Project Title:</label>
-    <br>
-    <input #newTitle>
-  </div>
+<label>New Project Organizer:</label>
+<input [(ngModel)]="selectedProject.organizer">
+<br>
 
-  <div>
-    <label>Project Organizer:</label>
-    <br>
-    <input #newOrganizer>
-  </div>
+<label>New Project goal:</label>
+<input [(ngModel)]="selectedProject.goal">
+<br>
 
-  <div>
-    <label>Project Goal:</label>
-    <br>
-    <input #newGoal>
-  </div>
+<label>New Project Date:</label>
+<input [(ngModel)]="selectedProject.date">
+<br>
 
-  <div>
-    <label>Project Date:</label>
-    <br>
-    <input #newDate>
-  </div>
+<label>New Album Description:</label>
+<input [(ngModel)]="selectedProject.description">
 
-  <div>
-    <label>Project Description:</label>
-    <br>
-    <textarea #newDescription></textarea>
-  </div>
-  <button class="btn btn-success" (click)="submitForm(newTitle.value, newOrganizer.value, newGoal.value, newDate.value, newDescription.value); newTitle.value=''; newOrganizer.value=''; newGoal.value=''; newDate.value=''; newDescription.value=''">Add</button>
-
-</div>
-<app-projects></app-projects>
+<button class="btn btn-warning" (click)="beginUpdatingProject(selectedProject)">Update</button>
+<button class="btn btn-danger" (click)="beginDeletingProject(selectedProject)">Delete</button>
+<hr>

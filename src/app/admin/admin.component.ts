@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Project} from '../project.model';
+import { Component, Input, OnInit } from '@angular/core';
 import { ProjectService } from '../project.service';
+import { Project } from '../project.model';
 
 @Component({
   selector: 'app-admin',
@@ -9,13 +9,21 @@ import { ProjectService } from '../project.service';
   providers: [ProjectService]
 })
 export class AdminComponent implements OnInit {
+  @Input() selectedProject;
 
+  
   constructor(private projectService: ProjectService) { }
 
   ngOnInit() {
   }
-  submitForm(title: string, organizer: string, goal: number, date: string, description: string) {
-    var newProject: Project = new Project(title, organizer, goal, date, description);
-    this.projectService.addProject(newProject);
+
+  beginUpdatingProject(projectToUpdate){
+    this.projectService.updateProject(projectToUpdate);
   }
+  beginDeletingProject(projectToDelete){
+    if(confirm("ARE YOU SURE?")){
+      this.projectService.deleteProject(projectToDelete);
+    }
+  }
+
 }

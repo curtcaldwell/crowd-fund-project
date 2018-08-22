@@ -1,0 +1,37 @@
+<h3>Add New Project to be FUNded</h3>
+<div class="card card-body">
+
+  <div>
+    <label>Project Title:</label>
+    <br>
+    <input #newTitle>
+  </div>
+
+  <div>
+    <label>Project Organizer:</label>
+    <br>
+    <input #newOrganizer>
+  </div>
+
+  <div>
+    <label>Project Goal:</label>
+    <br>
+    <input #newGoal>
+  </div>
+
+  <div>
+    <label>Project Date:</label>
+    <br>
+    <input #newDate>
+  </div>
+
+  <div>
+    <label>Project Description:</label>
+    <br>
+    <textarea #newDescription></textarea>
+  </div>
+  <button class="btn btn-success" (click)="submitForm(newTitle.value, newOrganizer.value, newGoal.value, newDate.value, newDescription.value); newTitle.value=''; newOrganizer.value=''; newGoal.value=''; newDate.value=''; newDescription.value=''">Add</button>
+</div>
+<div>
+  <app-projects></app-projects>
+</div>
